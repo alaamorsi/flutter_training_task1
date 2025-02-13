@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 class FavController extends GetxController {
   RxList<FavModel> favList = <FavModel>[].obs;
+  RxBool isLoading = true.obs;
 
   void changeFavorite(int index) {
     favList[index].isFavorite.value = favList[index].isFavorite.value == 0 ? 1 : 0;
@@ -11,11 +12,12 @@ class FavController extends GetxController {
 
   void fetchData() async {
     favList.value = await FavRepo.getFaveList();
+    isLoading.value = false;
   }
 
   @override
   void onInit() {
-    fetchData();
     super.onInit();
+    fetchData();
   }
 }

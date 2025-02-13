@@ -38,6 +38,7 @@ dependencies:
   get:
   dio:
   flutter_rating_bar:
+  cached_network_image:
 
 dev_dependencies:
   flutter_test:

@@ -7,22 +7,19 @@ class DioHelper {
   static init() {
     dio = Dio(
       BaseOptions(
-        baseUrl: ApiConstants.baseUrl,
-        receiveDataWhenStatusError: true,
-      ),
+          baseUrl: ApiConstants.baseUrl,
+          receiveDataWhenStatusError: true,
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer 5b1uDCgm63ddrhMIsDgEnEjuukVDnaBySAxwunluf8307c0a',
+          }),
     );
   }
 
   static Future<Response> postData({
     required String url,
     required Map<String, dynamic>? data,
-    required String token,
   }) async {
-    dio.options.headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer $token',
-    };
-
     return dio.post(
       url,
       data: data!,

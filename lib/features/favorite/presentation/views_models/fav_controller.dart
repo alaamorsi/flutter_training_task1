@@ -6,8 +6,8 @@ class FavController extends GetxController {
   RxList<FavModel> favList = <FavModel>[].obs;
   RxBool isLoading = true.obs;
 
-  void changeFavorite(int index) {
-    favList[index].isFavorite.value = favList[index].isFavorite.value == 0 ? 1 : 0;
+  void changeFavorite(int id) async {
+    favList.value = await FavRepo.removeFavorite(id);
   }
 
   void fetchData() async {

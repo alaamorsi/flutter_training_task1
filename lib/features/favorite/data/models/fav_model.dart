@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 class FavModel {
+  late int id;
   late String title;
   late String city;
   late String image;
@@ -9,6 +10,7 @@ class FavModel {
   late RxInt isFavorite;
 
   FavModel({
+    required this.id,
     required this.title,
     required this.city,
     required this.isFavorite,
@@ -18,6 +20,7 @@ class FavModel {
   });
 
   FavModel.fromJson(Map<String, dynamic> json) {
+    id = json['id'] ?? '';
     title = json['title'] ?? '';
     city = json['city'] ?? '';
     isFavorite = json['isFavorite'] ?? 1.obs;

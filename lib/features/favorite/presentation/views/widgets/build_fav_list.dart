@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_training_task1/features/favorite/data/models/fav_model.dart';
-import 'package:flutter_training_task1/features/favorite/presentation/view_models/fav_controller.dart';
+import 'package:flutter_training_task1/features/favorite/presentation/views_models/fav_controller.dart';
 import 'package:get/get.dart';
 
 class BuildFavList extends StatelessWidget {
@@ -38,7 +38,7 @@ class BuildFavList extends StatelessWidget {
                       right: 10,
                       child: IconButton(
                         onPressed: () {
-                          controller.changeFavorite(index);
+                          controller.changeFavorite(model.id);
                         },
                         icon: model.isFavorite.value == 1
                             ? const Icon(

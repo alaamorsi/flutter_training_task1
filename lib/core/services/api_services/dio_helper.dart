@@ -25,4 +25,11 @@ class DioHelper {
       data: data!,
     );
   }
+  static Future<Response> getData({
+    required String url,
+  }) async {
+    return dio.get(
+      url,
+    );
+  }
 }

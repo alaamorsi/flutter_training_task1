@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_training_task1/features/ticket/presentation/views_models/ticket_controller.dart';
+import 'package:flutter_training_task1/features/ticket/presentation/view_models/ticket_controller.dart';
 import 'package:get/get.dart';
 
 class BuildTextformfieldReply extends StatelessWidget {

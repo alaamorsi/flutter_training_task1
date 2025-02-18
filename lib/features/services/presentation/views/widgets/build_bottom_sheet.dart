@@ -45,7 +45,7 @@ class BuildBottomSheet extends StatelessWidget {
                     SizedBox(
                       height: 10.0.sp,
                     ),
-                    BuildSelectServices(),
+                    const BuildSelectServices(),
                     SizedBox(
                       height: 10.0.sp,
                     ),
@@ -132,7 +132,7 @@ class BuildBottomSheet extends StatelessWidget {
                               controller.service3.value = false;
                               commentsController.clear();
                             }
-                            Future.delayed(Duration(seconds: 2));
+                            Future.delayed(const Duration(seconds: 2));
                             Get.back();
                             showSuccessDialog();
                           },
@@ -161,7 +161,7 @@ class BuildBottomSheet extends StatelessWidget {
         color: Colors.green.shade600,
         padding: EdgeInsets.all(15.0.sp),
         shape: const CircleBorder(),
-        child: Icon(
+        child: const Icon(
           Icons.add,
           color: Colors.white,
         ),

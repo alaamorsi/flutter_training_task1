@@ -11,7 +11,7 @@ void showSuccessDialog() {
     barrierDismissible: false, // Prevent closing by tapping outside
     confirm: ElevatedButton(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.green),
+        backgroundColor: WidgetStateProperty.all(Colors.green),
       ),
       onPressed: () {
         Get.back(); // Close dialog

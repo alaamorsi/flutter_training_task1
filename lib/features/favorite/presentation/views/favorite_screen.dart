@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training_task1/features/favorite/presentation/views/widgets/build_fav_list.dart';
-import 'package:flutter_training_task1/features/favorite/presentation/views_models/fav_controller.dart';
+import 'package:flutter_training_task1/features/favorite/presentation/view_models/fav_controller.dart';
 import 'package:get/get.dart';
 
 class FavoriteScreen extends StatelessWidget {
@@ -10,8 +10,7 @@ class FavoriteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: GetX<FavController>(
+    return GetX<FavController>(
           builder: (c) => controller.isLoading.value == true
               ? const Center(
                   child: CircularProgressIndicator(
@@ -27,6 +26,6 @@ class FavoriteScreen extends StatelessWidget {
                         height: 10.0,
                       ),
                   itemCount: controller.favList.length),
-        ));
+        );
   }
 }

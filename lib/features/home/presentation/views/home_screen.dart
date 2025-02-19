@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training_task1/features/home/presentation/views_models/home_controller.dart';
+import 'package:flutter_training_task1/features/home/presentation/view_models/home_controller.dart';
 import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
-  final HomeController controller = Get.put(HomeController());
+  final controller = Get.lazyPut(()=>HomeController());
   @override
   Widget build(BuildContext context) {
     return GetX<HomeController>(
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
             controller.changeBottomNave(index);
           },
           backgroundColor: Colors.blueGrey.shade600,
-          iconSize: 25.0,
+          iconSize: 27.0,
           gap: 8,
           tabs: const [
             GButton(
@@ -47,6 +47,14 @@ class HomeScreen extends StatelessWidget {
               iconColor: Colors.amber,
               text: 'Tickets',
               iconActiveColor: Colors.amber,
+              backgroundColor: Colors.blueGrey,
+              textStyle: TextStyle(color: Colors.white, fontSize: 18.0),
+            ),
+            GButton(
+              icon: Icons.settings,
+              iconColor: Colors.black,
+              text: 'Services',
+              iconActiveColor: Colors.black,
               backgroundColor: Colors.blueGrey,
               textStyle: TextStyle(color: Colors.white, fontSize: 18.0),
             ),

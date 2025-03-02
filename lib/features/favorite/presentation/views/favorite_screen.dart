@@ -4,6 +4,7 @@ import 'package:flutter_training_task1/features/favorite/presentation/view_model
 import 'package:get/get.dart';
 
 class FavoriteScreen extends StatelessWidget {
+
   FavoriteScreen({super.key});
 
   final FavController controller = Get.find();

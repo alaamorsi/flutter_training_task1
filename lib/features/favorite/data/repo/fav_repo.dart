@@ -29,7 +29,7 @@ abstract class FavRepo {
         return getFaveList();
       }
     } catch (error) {
-      print(error);
+      // print(error);
     }
     return [];
   }

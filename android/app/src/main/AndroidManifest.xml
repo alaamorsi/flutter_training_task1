@@ -3,6 +3,9 @@
         android:label="flutter_training_task1"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+         <meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="AIzaSyCjTsEoMx39a6K3ifY_kzyZVOgKIUJ94_w"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

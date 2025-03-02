@@ -16,7 +16,7 @@ abstract class ServicesRepo {
         return [];
       }
     } catch (error) {
-      print(error.toString());
+      // print(error.toString());
     }
     return [];
   }
@@ -37,7 +37,7 @@ abstract class ServicesRepo {
         return false;
       }
     } catch (error) {
-      print(error.toString());
+      // print(error.toString());
     }
     return false;
   }

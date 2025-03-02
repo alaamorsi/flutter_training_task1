@@ -11,7 +11,7 @@ class DioHelper {
           receiveDataWhenStatusError: true,
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 5b1uDCgm63ddrhMIsDgEnEjuukVDnaBySAxwunluf8307c0a',
+            'Authorization': 'Bearer F7OWr90oQmGdtIY2xKWCk8xJhDjhW5qu7InuLzma83b9464d',
           }),
     );
   }
@@ -22,7 +22,7 @@ class DioHelper {
   }) async {
     return dio.post(
       url,
-      data: data!,
+      data: data,
     );
   }
   static Future<Response> getData({
